@@ -14,18 +14,53 @@
         <button id="langBtn" onclick="toggleLanguage()">தமிழ்</button>
     </div>
 
-    <div class="container">
-        <header class="hero">
+    <div class="hero-banner">
+        <div class="overlay"></div>
+        <div class="hero-content">
             <div class="kolam-pattern"></div>
-            <h1 class="main-title" data-en="Wedding Invitation" data-ta="திருமண அழைப்பிதழ்">Wedding Invitation</h1>
+            <p class="pre-title" data-en="You are invited to" data-ta="நீங்கள் அழைக்கப்படுகிறீர்கள்">You are invited to</p>
+            <h1 class="main-title" data-en="The Wedding Celebration" data-ta="திருமண விழா">The Wedding Celebration</h1>
             <div class="divider"></div>
-        </header>
+            <div class="countdown" id="countdown">
+                <div class="time-box">
+                    <span id="days">0</span>
+                    <small data-en="Days" data-ta="நாட்கள்">Days</small>
+                </div>
+                <div class="time-box">
+                    <span id="hours">0</span>
+                    <small data-en="Hours" data-ta="மணி">Hours</small>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">0</span>
+                    <small data-en="Minutes" data-ta="நிமிடங்கள்">Minutes</small>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">0</span>
+                    <small data-en="Seconds" data-ta="விநாடிகள்">Seconds</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
 
         <section class="couple-section">
-            <div class="heart-frame">
-                <img src="groom_image.jpeg" alt="Groom" class="couple-img">
+            <p class="couple-text" data-en="Join us in celebrating the union of" data-ta="இணைவதை கொண்டாடுங்கள்">Join us in celebrating the union of</p>
+            <div class="couple-container">
+                <div class="couple-frame">
+                    <div class="heart-frame">
+                        <img src="groom_image.jpeg" alt="Groom" class="couple-img">
+                    </div>
+                    <h3 class="couple-name" data-en="Groom" data-ta="மணமகன்">Groom</h3>
+                </div>
+                <div class="ampersand">&</div>
+                <div class="couple-frame">
+                    <div class="heart-frame">
+                        <img src="groom_image.jpeg" alt="Bride" class="couple-img">
+                    </div>
+                    <h3 class="couple-name" data-en="Bride" data-ta="மணமகள்">Bride</h3>
+                </div>
             </div>
-            <p class="couple-text" data-en="Join us in celebrating" data-ta="எங்கள் மகிழ்ச்சியில் பங்கு கொள்ளுங்கள்">Join us in celebrating</p>
         </section>
 
         <section class="events">
