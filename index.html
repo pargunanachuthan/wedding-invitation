@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="lang-toggle">
+        <button id="langBtn" onclick="toggleLanguage()">தமிழ்</button>
+    </div>
+
+    <div class="container">
+        <header class="hero">
+            <div class="kolam-pattern"></div>
+            <h1 class="main-title" data-en="Wedding Invitation" data-ta="திருமண அழைப்பிதழ்">Wedding Invitation</h1>
+            <div class="divider"></div>
+        </header>
+
+        <section class="couple-section">
+            <div class="heart-frame">
+                <img src="groom_image.jpeg" alt="Groom" class="couple-img">
+            </div>
+            <p class="couple-text" data-en="Join us in celebrating" data-ta="எங்கள் மகிழ்ச்சியில் பங்கு கொள்ளுங்கள்">Join us in celebrating</p>
+        </section>
+
+        <section class="events">
+            <div class="event-card">
+                <div class="event-icon">💍</div>
+                <h2 data-en="Engagement" data-ta="நிச்சயதார்த்தம்">Engagement</h2>
+                <p class="date" data-en="21st February 2026 (Saturday)" data-ta="21 பிப்ரவரி 2026 (சனிக்கிழமை)">21st February 2026 (Saturday)</p>
+                <p class="time" data-en="7:00 PM onwards" data-ta="மாலை 7:00 மணி முதல்">7:00 PM onwards</p>
+            </div>
+
+            <div class="event-card highlight">
+                <div class="event-icon">🕉️</div>
+                <h2 data-en="Muhurtham (Wedding)" data-ta="முகூர்த்தம் (திருமணம்)">Muhurtham (Wedding)</h2>
+                <p class="date" data-en="22nd February 2026 (Sunday)" data-ta="22 பிப்ரவரி 2026 (ஞாயிற்றுக்கிழமை)">22nd February 2026 (Sunday)</p>
+                <p class="time" data-en="4:30 AM – 6:00 AM" data-ta="காலை 4:30 – 6:00">4:30 AM – 6:00 AM</p>
+            </div>
+
+            <div class="event-card">
+                <div class="event-icon">🎊</div>
+                <h2 data-en="Reception" data-ta="வரவேற்பு">Reception</h2>
+                <p class="date" data-en="22nd February 2026" data-ta="22 பிப்ரவரி 2026">22nd February 2026</p>
+                <p class="time" data-en="7:00 AM – 11:00 AM" data-ta="காலை 7:00 – 11:00">7:00 AM – 11:00 AM</p>
+            </div>
+        </section>
+
+        <section class="venue">
+            <h2 data-en="Venue" data-ta="இடம்">Venue</h2>
+            <div class="venue-details">
+                <h3>SVT Tirumanamandapam (SVT Mahal)</h3>
+                <p data-en="Uthangarai, Kalluganur, Tamil Nadu – 635207" data-ta="உத்தங்கரை, கல்லுகனூர், தமிழ்நாடு – 635207">Uthangarai, Kalluganur, Tamil Nadu – 635207</p>
+            </div>
+        </section>
+
+        <section class="rsvp-section">
+            <h2 data-en="Guest Information" data-ta="விருந்தினர் விவரங்கள்">Guest Information</h2>
+            <form id="guestForm">
+                <input type="text" id="name" placeholder="Your Name" data-placeholder-en="Your Name" data-placeholder-ta="உங்கள் பெயர்" required>
+                <input type="text" id="place" placeholder="Place / City" data-placeholder-en="Place / City" data-placeholder-ta="ஊர் / நகரம்" required>
+                <input type="tel" id="phone" placeholder="Phone Number (Optional)" data-placeholder-en="Phone Number (Optional)" data-placeholder-ta="தொலைபேசி எண் (விருப்பம்)">
+                <textarea id="message" rows="4" placeholder="Message (for travel assistance or guidance)" data-placeholder-en="Message (for travel assistance or guidance)" data-placeholder-ta="செய்தி (பயண உதவி அல்லது வழிகாட்டுதலுக்கு)" required></textarea>
+                <button type="submit" data-en="Submit" data-ta="சமர்ப்பிக்கவும்">Submit</button>
+            </form>
+            <div id="thankYouMsg" class="thank-you hidden">
+                <p data-en="Thank you for your response. Groom's brother will reach you soon for guidance." data-ta="உங்கள் பதிலுக்கு நன்றி. மணமகனின் சகோதரர் விரைவில் உங்களை தொடர்பு கொள்வார்.">Thank you for your response. Groom's brother will reach you soon for guidance.</p>
+                <p data-en="Alternatively, you may contact him directly at +91 63792 98097." data-ta="அல்லது நீங்கள் நேரடியாக +91 63792 98097 என்ற எண்ணில் தொடர்பு கொள்ளலாம்.">Alternatively, you may contact him directly at +91 63792 98097.</p>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2 data-en="Location & Directions" data-ta="இடம் மற்றும் வழிகாட்டுதல்">Location & Directions</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.8!2d78.0!3d12.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDAwJzAwLjAiTiA3OMKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <a href="https://www.google.com/maps/place/SVT+Tirumanamandapam,+Uthangarai,+Tamil+Nadu+635207" target="_blank" class="directions-btn" data-en="Get Directions" data-ta="வழிகாட்டுதலைப் பெறுங்கள்">Get Directions</a>
+        </section>
+
+        <section class="share-section">
+            <button onclick="shareWhatsApp()" class="whatsapp-btn">
+                <span data-en="Share via WhatsApp" data-ta="WhatsApp மூலம் பகிரவும்">Share via WhatsApp</span>
+            </button>
+            <button onclick="addToCalendar()" class="calendar-btn">
+                <span data-en="Add to Calendar" data-ta="நாட்காட்டியில் சேர்க்கவும்">Add to Calendar</span>
+            </button>
+        </section>
+
+        <footer>
+            <p data-en="With love and blessings" data-ta="அன்பும் ஆசீர்வாதமும்">With love and blessings</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
