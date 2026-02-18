@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Wedding Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;800&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royal: { 900: '#2a0202', 800: '#4a0404', 700: '#630808', 100: '#f9ebeb' },
+                        gold: { 400: '#d4af37', 500: '#c5a028', 600: '#b08d20' },
+                        cream: '#fffdd0',
+                    },
+                    fontFamily: {
+                        script: ['Great Vibes', 'cursive'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-royal-900 text-cream min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-2xl w-full text-center">
+        <div class="bg-royal-800 p-12 rounded-lg border-2 border-gold-500 shadow-2xl">
+            <i class="fas fa-check-circle text-8xl text-green-500 mb-6 animate-bounce"></i>
+            <h1 class="font-script text-6xl text-gold-400 mb-4">Thank You!</h1>
+            <p class="font-serif text-2xl text-cream mb-6">Your response has been recorded successfully.</p>
+            <div class="border-t border-gold-500/30 pt-6 mt-6">
+                <p class="text-gold-200 text-xl mb-4">Groom's brother will reach you soon</p>
+                <p class="text-cream mb-2">Or you can directly call him at</p>
+                <a href="tel:+916379298097" class="inline-block bg-gold-500 text-royal-900 px-8 py-4 rounded-full text-2xl font-bold hover:bg-gold-400 transition-colors">
+                    <i class="fas fa-phone mr-2"></i>6379298097
+                </a>
+            </div>
+            <div class="mt-8">
+                <a href="index.html" class="text-gold-400 hover:text-gold-300 underline">← Back to Invitation</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
