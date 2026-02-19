@@ -306,14 +306,14 @@
 
                 <div class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24">
                     <!-- Groom -->
-                    <div class="text-center couple-card opacity-0 transform -translate-x-20">
-                        <div class="relative w-64 h-64 mx-auto mb-6">
+                    <div class="text-center couple-card opacity-0 transform -translate-x-20 scale-0">
+                        <div class="relative w-64 h-64 mx-auto mb-6 cursor-pointer" onclick="var img = this.querySelector('img'); if(img.src.includes('_bkup')) { img.src = 'groom_image.jpeg'; img.style.objectPosition = 'center'; } else { img.src = 'groom_image_bkup.jpeg'; img.style.objectPosition = 'center 1cm'; }">
                             <div class="absolute inset-0 border-4 border-gold-500 rounded-full transform rotate-45">
                             </div>
                             <div class="absolute inset-0 border-4 border-royal-900 rounded-full transform -rotate-12">
                             </div>
-                            <img src="groom_image.jpeg"
-                                class="w-full h-full object-cover rounded-full shadow-xl transition-all duration-500"
+                            <img src="groom_image_bkup.jpeg"
+                                class="w-full h-full object-cover rounded-full shadow-xl transition-all duration-500" style="object-position: center 1cm;"
                                 alt="Groom">
                         </div>
                         <h3 class="font-script text-4xl text-royal-900 mb-2">Jaya Suriya</h3>
@@ -327,13 +327,13 @@
                     </div>
 
                     <!-- Bride -->
-                    <div class="text-center couple-card opacity-0 transform translate-x-20">
-                        <div class="relative w-64 h-64 mx-auto mb-6">
+                    <div class="text-center couple-card opacity-0 transform translate-x-20 scale-0">
+                        <div class="relative w-64 h-64 mx-auto mb-6 cursor-pointer" onclick="this.querySelector('img').src = this.querySelector('img').src.includes('_front') ? 'bride_photo.jpeg' : 'bride_photo_front.jpeg'">
                             <div class="absolute inset-0 border-4 border-gold-500 rounded-full transform -rotate-45">
                             </div>
                             <div class="absolute inset-0 border-4 border-royal-900 rounded-full transform rotate-12">
                             </div>
-                            <img src="bride_photo.jpeg"
+                            <img src="bride_photo_front.jpeg"
                                 class="w-full h-full object-cover rounded-full shadow-xl transition-all duration-500"
                                 alt="Bride">
                         </div>
@@ -773,7 +773,7 @@
 
         gsap.to(".couple-card", {
             scrollTrigger: { trigger: ".couple-card", start: "top 75%" },
-            x: 0, opacity: 1, stagger: 0.3, duration: 1, ease: "back.out(1.7)"
+            x: 0, opacity: 1, scale: 1, stagger: 0.3, duration: 1.5, ease: "back.out(1.7)"
         });
 
         ScrollTrigger.create({
